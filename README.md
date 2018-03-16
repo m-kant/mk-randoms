@@ -37,7 +37,7 @@ sourceStr: is a set of acceptable characters, default is "abcdefghijklmnopqrstuv
 ### random.element(arr[, quantity])
 Random element of array, or array - random subset of sourse array, where every source element can be copied no more then one time. 
 arr: source array. 
-quantity: default is 1, if 1 returns random array element,otherwise it is a length of resulting array if number, larger then source array length, then returns source array
+quantity: default is 1, if 1 returns random array element, otherwise it is a length of resulting array, if quantity is larger then source array length, then returns source array.
 ### random.shift(val[, percentage])
 Random shift of numerical value.
 val: original number.
