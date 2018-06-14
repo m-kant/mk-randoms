@@ -1,8 +1,10 @@
 'use strict';
 
+/** Set of random values 
+ * @namespace random */
 const random = {
 
-  /** Random number between min (inclusive) and max (exclusive)
+  /** Random number between min and max values
    * @param {Number} min
    * @param {Number} max
    * @returns {Number}
@@ -20,8 +22,10 @@ const random = {
     return Math.round( this.num(min, max) );
   },
 
-  /** Random boolean
-   * @param {Number} okProbability probability of 'true'
+  /** Random boolean value with given probability.
+   *  random.ok(0) allways returns false,
+   *  random.ok(100) allways returns true
+   * @param {Number} okProbability probability of 'true' between 0 and 100
    * @returns {Boolean}
    */
   ok(okProbability = 50){
@@ -30,7 +34,7 @@ const random = {
     return (this.num(0, 100) < okProbability);
   },
 
-  /** Random string
+  /** Random string of arbitrary length
    * @param {Number} length string length
    * @param {String} strSource set of letters to construct resulting string
    * @returns {String}
@@ -43,8 +47,9 @@ const random = {
     return res;
   },
 
-  /** If length given then random array of elements, even if length is 1
-   *  If no length given, then one random element
+  /** Random array element[s].
+   *  If no length given, then one random element.
+   *  If length given, then random array of elements, even if length is 1.
    * @param {Array} arr source array
    * @param {Number} length how much elements to return
    * @returns {Mix|Array} Random array element or array of random elements

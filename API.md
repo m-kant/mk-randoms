@@ -40,7 +40,7 @@ Returns **[Boolean][2]**
 
 ### str
 
-Random string
+Random string of arbitrary length
 
 #### Parameters
 

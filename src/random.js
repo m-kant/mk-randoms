@@ -34,7 +34,7 @@ const random = {
     return (this.num(0, 100) < okProbability);
   },
 
-  /** Random string
+  /** Random string of arbitrary length
    * @param {Number} length string length
    * @param {String} strSource set of letters to construct resulting string
    * @returns {String}
