@@ -52,22 +52,24 @@ var random = {
   },
 
 
-  /** Random array element or array of random elements
+  /** If length given then random array of elements, even if length is 1
+   *  If no length given, then one random element
    * @param {Array} arr source array
-   * @param {Number} quantity how much elements to return
-   * @returns {Mix|Array}
+   * @param {Number} length how much elements to return
+   * @returns {Mix|Array} Random array element or array of random elements
    */
   element: function element(arr) {
-    var quantity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
-    if (quantity === 1) return arr[this.int(0, arr.length - 1)];
-    if (quantity >= arr.length) return arr;
+    if (!length) return arr[this.int(0, arr.length - 1)];
+    if (length === 1) return [arr[this.int(0, arr.length - 1)]];
+    if (length >= arr.length) return arr;
 
     var arrx = arr.filter(function () {
       return true;
     }); // copy source array
     var res = [];
-    for (var i = 0; i < quantity; i++) {
+    for (var i = 0; i < length; i++) {
       var k = this.int(0, arrx.length - 1);
       res = res.concat(arrx.splice(k, 1));
     }

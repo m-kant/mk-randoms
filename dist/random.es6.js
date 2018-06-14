@@ -43,18 +43,20 @@ const random = {
     return res;
   },
 
-  /** Random array element or array of random elements
+  /** If length given then random array of elements, even if length is 1
+   *  If no length given, then one random element
    * @param {Array} arr source array
-   * @param {Number} quantity how much elements to return
-   * @returns {Mix|Array}
+   * @param {Number} length how much elements to return
+   * @returns {Mix|Array} Random array element or array of random elements
    */
-  element(arr, quantity = 1){
-    if(quantity === 1) return arr[this.int(0, arr.length - 1)];
-    if(quantity >= arr.length) return arr;
+  element(arr, length = 1){
+    if(!length) return arr[this.int(0, arr.length - 1)];
+    if(length === 1) return [ arr[this.int(0, arr.length - 1)] ];
+    if(length >= arr.length) return arr;
 
     const arrx = arr.filter( () => true ); // copy source array
     let res = [];
-    for(let i = 0; i < quantity; i++){
+    for(let i = 0; i < length; i++){
       const k = this.int(0, arrx.length - 1);
       res = res.concat( arrx.splice(k, 1) );
     }

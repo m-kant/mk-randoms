@@ -1,79 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- script -->
-	<script charset='UTF-8' src='../dist/random.min.js'></script>
-
-	<title>mk-randoms Demo</title>
-
-</head>
-<body>
-<div class="container">
-	<h1>mk-randoms</h1>
-	
-	<p>Generate random values of different types with clear syntax with 1K lib.</p>
-	<p>Random integer, random array element, random string, random boolean with given probability, random offset of numerical.</p>
-	
-	<h2>Installation</h2>
-	<pre>npm install --save mk-randoms</pre>
-
-	<h2>Inclusion</h2>
-	<div>Node js:</div>
-	<pre>var random = require('mk-randoms')</pre>
-	<div>ES6:</div>
-	<pre>import random from 'mk-randoms/dist/random.es6'</pre>
-	<pre>import random from 'mk-randoms' // this will work as well</pre>
-	<div>Browser:</div>
-	<pre>&lt;script src="node_modules/mk-randoms/dist/random.min.js">&lt;/script></pre>
-	
-
-	<h2>Usage</h2>
-
-	<h3>random.num(min, max)</h3>
-	<div>Random numerical value between <b>min</b> and <b>max</b> values.</div>
-
-	<h3>random.int(min, max)</h3>
-	<div>Random integer between <b>min</b> and <b>max</b> values.</div>
-
-	<h3>random.ok([okProbability])</h3>
-	<div>Random boolean. <br />
-		<b>okProbability</b> - is an optional probability  of "TRUE" value percentage, dafault is 50.</div>
-
-	<h3>random.str([length][, sourceStr])</h3>
-	<div>Random string. <br />
-		<b>length</b>: is a length of string, dafault is 1. <br />
-		<b>sourceStr</b>: is a set of acceptable characters, default is "abcdefghijklmnopqrstuvwxyz"</div>
-
-	<h3>random.element(arr[, quantity])</h3>
-	<div>Random element of array, or array - random subset of sourse array, where every source element can be copied no more then one time. <br />
-		<b>arr</b>: source array. <br />
-		<b>quantity</b>: default is 1, if 1 returns random array element, otherwise it is a length of resulting array, 
-		if quantity is larger then source array length, then returns source array.</div>
-
-	<h3>random.shift(val[, percentage])</h3>
-	<div>Random shift of numerical value.<br />
-		<b>val</b>: original number.<br />
-		<b>percentage</b>: amplitude of discrepancy, default is 10.</div>
-
-	<h3>random.intShift(val[, percentage])</h3>
-	<div>Random integer shift of integer value.<br />
-		<b>val</b>: original number.<br />
-		<b>percentage</b>: amplitude of discrepancy, default is 10.</div>
-
-
-</div><!-- .container -->
-<h3>&nbsp;</h3>
-	<script>
-	</script>
-</body>
-</html>
-
+<!DOCTYPE html><html><head></head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0, width=device-width"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css"><title>mk-randoms docs</title><body><div class="container"><h1>mk-randoms</h1>
+<p>Generate random values of different types with clear syntax with 1K lib.</p>
+<p>Random integer, random array element, random string, random boolean with given probability, random offset of numerical.</p>
+<h2>Installation</h2>
+<pre><code class="language-sh">npm install --save mk-randoms
+</code></pre>
+<h2>Inclusion</h2>
+<p>Node js:</p>
+<pre><code class="language-JavaScript"><span class="hljs-keyword">var</span> random = <span class="hljs-built_in">require</span>(<span class="hljs-string">'mk-randoms'</span>)
+</code></pre>
+<p>ES6:</p>
+<pre><code class="language-JavaScript"><span class="hljs-keyword">import</span> random <span class="hljs-keyword">from</span> <span class="hljs-string">'mk-randoms/dist/random.es6'</span>
+<span class="hljs-keyword">import</span> random <span class="hljs-keyword">from</span> <span class="hljs-string">'mk-randoms'</span> <span class="hljs-comment">// this will work as well</span>
+</code></pre>
+<p>Browser:</p>
+<pre><code class="language-HTML"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"node_modules/mk-randoms/dist/random.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2>Usage</h2>
+<h3>random.num(min, max)</h3>
+<p>Random numerical value between min and max values.</p>
+<h3>random.int(min, max)</h3>
+<p>Random integer between min and max values.</p>
+<h3>random.ok([okProbability])</h3>
+<p>Random boolean.
+okProbability - is an optional probability of &quot;TRUE&quot; value percentage, dafault is 50.</p>
+<h3>random.str([length][, sourceStr])</h3>
+<p>Random string.
+length: is a length of string, dafault is 1.
+sourceStr: is a set of acceptable characters, default is &quot;abcdefghijklmnopqrstuvwxyz&quot;</p>
+<h3>random.element(arr[, quantity])</h3>
+<p>Random element of array, or array - random subset of sourse array, where every source element can be copied no more then one time.
+arr: source array.
+quantity: default is 1, if 1 returns random array element, otherwise it is a length of resulting array, if quantity is larger then source array length, then returns source array.</p>
+<h3>random.shift(val[, percentage])</h3>
+<p>Random shift of numerical value.
+val: original number.
+percentage: amplitude of discrepancy, default is 10.</p>
+<h3>random.intShift(val[, percentage])</h3>
+<p>Random integer shift of integer value.
+val: original number.
+percentage: amplitude of discrepancy, default is 10.</p>
+</div></body></html>
