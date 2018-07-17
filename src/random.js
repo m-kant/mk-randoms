@@ -54,7 +54,7 @@ const random = {
    * @param {Number} length how much elements to return
    * @returns {Mix|Array} Random array element or array of random elements
    */
-  element(arr, length = 1){
+  element(arr, length){
     if(!length) return arr[this.int(0, arr.length - 1)];
     if(length === 1) return [ arr[this.int(0, arr.length - 1)] ];
     if(length >= arr.length) return arr;

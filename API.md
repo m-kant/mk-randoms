@@ -58,7 +58,7 @@ Random array element[s].
 #### Parameters
 
 -   `arr` **[Array][4]** source array
--   `length` **[Number][1]** how much elements to return (optional, default `1`)
+-   `length` **[Number][1]** how much elements to return
 
 Returns **(Mix | [Array][4])** Random array element or array of random elements
 

@@ -64,9 +64,7 @@ var random = {
    * @param {Number} length how much elements to return
    * @returns {Mix|Array} Random array element or array of random elements
    */
-  element: function element(arr) {
-    var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-
+  element: function element(arr, length) {
     if (!length) return arr[this.int(0, arr.length - 1)];
     if (length === 1) return [arr[this.int(0, arr.length - 1)]];
     if (length >= arr.length) return arr;
