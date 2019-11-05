@@ -1,17 +1,22 @@
 {
   "name": "mk-randoms",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "Random integer, Random array element, Random string, Random boolean with given probability, Random offset of numerical",
   "main": "dist/random.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build"
   },
+  "types": "src/random.d.ts",
   "keywords": [
     "random",
+    "randomizer",
     "generator",
     "array",
     "element",
+    "random array element",
+    "random subset",
+    "random offset",
     "string"
   ],
   "author": "m.kantemirov",

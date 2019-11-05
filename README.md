@@ -3,6 +3,8 @@ Generate random values of different types with clear syntax with 1K lib.
 
 Random integer, random array element, random string, random boolean with given probability, random offset of numerical.
 
+Type declaration added for Typescript.
+
 ## Installation
 ```sh
 npm install --save mk-randoms
